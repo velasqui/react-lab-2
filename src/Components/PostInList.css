@@ -1,0 +1,15 @@
+h3, p {
+    margin: 0;
+    float: left;
+}
+
+.post-list {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 25px;
+    overflow: auto;
+}
+
+.material-symbols-outlined {
+    float: right;
+}
