@@ -1,15 +1,33 @@
-h3, p {
-    margin: 0;
-    float: left;
-}
-
 .post-list {
+    width: 50%;
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px 25px;
-    overflow: auto;
 }
 
-.material-symbols-outlined {
-    float: right;
+.post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-title {
+    margin: 0;
+}
+
+.post-thought {
+    font-size: 18px;
+    margin: 0;
+}
+
+.delete-post-icon {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    cursor: pointer;
 }

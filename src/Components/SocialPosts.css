@@ -13,8 +13,10 @@
     margin: 10px auto;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.form {
-    width: 50%;
+.new-thought-btn:active {
+    background-color: white;
+    color: #03a9f4;
 }

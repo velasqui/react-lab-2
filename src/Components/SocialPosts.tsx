@@ -11,7 +11,7 @@ export interface Post {
 
 export default function SocialPosts() {
   const [postInList, setPostInList] = useState<Post[]>([]);
-  const [isActive, setIsActive] = useState(false);
+  const [isModalOpen, setModalState] = useState(false);
 
   function handleSubmit(post: Post) {
     setPostInList([post, ...postInList]);
@@ -21,18 +21,13 @@ export default function SocialPosts() {
     setPostInList(postInList.filter((post) => post.title !== title));
   };
 
-  function handleClick() {
-    setIsActive(current => !current);
-  }
+  const toggleModal = () => setModalState(!isModalOpen);
 
   return (
-    
     <div className='main-content'>
-      <button className='new-thought-btn' onClick={handleClick}>New Thought</button>
-      <div className='form'>
-      {isActive && <PostForm onSubmit={handleSubmit} />}
-      <PostInList postList={postInList} onDelete={() => handleDelete} />
-      </div>
+      <button className='new-thought-btn' onClick={toggleModal}>New Thought</button>
+      {isModalOpen && <PostForm isOpen={isModalOpen} onClose={toggleModal} onSubmit={handleSubmit} />}
+      <PostInList post={postInList} onDelete={handleDelete} />
     </div>
   )
 }

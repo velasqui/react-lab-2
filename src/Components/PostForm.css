@@ -3,19 +3,49 @@ h3 {
     margin-top: 0;
 }
 
-form {
-    padding: 20px;
-    border: 1px solid black;
-    background-color: #79c5e8;
-    border-radius: 5px;
-}
-
 input {
     margin-bottom: 10px;
     padding: 10px;
     width: 100%;
     border-radius: 5px;
-    resize: vertical;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+}
+
+.form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    cursor: pointer;
+}
+
+.modal-box {
+    position: relative;
+    width: 50%;
+    margin: 0 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #79c5e8;
+    cursor: auto;
 }
 
 .add-post-btn {
@@ -23,4 +53,17 @@ input {
     margin-top: 15px;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-post-btn:active {
+    background-color: #03a9f4;
+    color: white;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
